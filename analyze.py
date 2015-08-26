@@ -8,6 +8,7 @@ import pandas as pd
 import numpy as np
 import sys, math
 import csv
+
 def plot_portfolio(fund, benchmark):
     
     #Read the value from the funds 
@@ -18,7 +19,7 @@ def plot_portfolio(fund, benchmark):
         ls_values.append(float(row[3]))
         ldt_timestamps.append(dt.datetime(int(row[0]), int(row[1]), int(row[2]), 16))
     ts_fund = pd.TimeSeries(ls_values, index = ldt_timestamps)
-    #print ts_fund
+    
         
     #Retrieve Data for Benchmark 
     dt_timeofday = dt.timedelta(hours=16)
